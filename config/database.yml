@@ -24,6 +24,9 @@ default: &default
 development:
   <<: *default
   database: blog_2_development
+  username: blog_2
+  # password: <%= ENV['BLOG_2_DATABASE_PASSWORD'] %>
+  password: blog_2
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,6 +61,9 @@ development:
 test:
   <<: *default
   database: blog_2_test
+  username: blog_2
+#  password: <%= ENV['BLOG_2_DATABASE_PASSWORD'] %>
+  password: blog_2
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -82,4 +88,5 @@ production:
   <<: *default
   database: blog_2_production
   username: blog_2
-  password: <%= ENV['BLOG_2_DATABASE_PASSWORD'] %>
+#  password: <%= ENV['BLOG_2_DATABASE_PASSWORD'] %>
+  password: blog_2
