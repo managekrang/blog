@@ -43,5 +43,7 @@ group :development, :test do
   gem 'spring'
 end
 
+group :production do
   # Server on the heroku
   gem 'thin'
+end
